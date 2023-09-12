@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const StyledSignIn = styled.div`
   .login_with_exist_account {
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
     text-align: center;
     margin-top: 20px;
     a {

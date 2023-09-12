@@ -35,7 +35,13 @@ import { END_POINTS } from "@/constants/endPoints";
 import { theme } from "@/styles/theme";
 import { StyledSignIn } from "./style";
 
+// Hooks
+import {} from "@/hooks/useAuth";
+import { useAuthContext } from "@/contexts/AuthContext";
+
 const Signup = () => {
+  const { handleAUTHENTICATE }: any = useAuthContext();
+
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -75,19 +81,7 @@ const Signup = () => {
 
   const onSubmit = async (data: any) => {
     data = { ...data, name: fullName };
-
-    try {
-      const response = await axios.post(
-        `https://react-tt-api.onrender.com/api/users${END_POINTS.SIGNUP}`,
-        data
-      );
-      setIsLoading(true);
-      // [ ] Redirect Here After add Protect Routes!
-    } catch (error) {
-      throw new Error(`Signup error :${error}`);
-    } finally {
-      setIsLoading(false);
-    }
+    await handleAUTHENTICATE(END_POINTS.SIGNUP, data);
   };
 
   return (
@@ -226,11 +220,6 @@ const Signup = () => {
               }
               label="Yes, I understand and agree to the Upwork Terms of Service, including the User Agreement and Privacy Policy ."
             />
-            {errors.agreement && (
-              <CustomAlert severity="error">
-                {errors.agreement?.message}
-              </CustomAlert>
-            )}
             <Button
               fullWidth
               type="submit"
@@ -245,11 +234,11 @@ const Signup = () => {
                 },
               }}
             >
-              Create My Account
+              {isLoading ? "Loading ..." : "Create My Account"}
             </Button>
 
             <span className="login_with_exist_account">
-              {isLoading ? "Loading ..." : "Already have an account?"}
+              Already have an account?
               <CustomLink href="/signin">Log In</CustomLink>
             </span>
           </form>
