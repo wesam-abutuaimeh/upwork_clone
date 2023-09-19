@@ -2,36 +2,33 @@
 import React, { useState } from "react";
 
 // MUI Component
-import {
-  Container,
-  Box,
-  Typography,
-  Button,
-  TextField,
-  OutlinedInput,
-} from "@mui/material";
+import { Container, Box, Typography, Button, TextField } from "@mui/material";
+
+// External Libraries
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 // Yup Signin Schema
 import { loginSchema } from "@/validation/authSchema";
 
-// External Libraries
-import axios from "axios";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-
 // Constants API End points
 import { END_POINTS } from "@/constants/endPoints";
+
+// Custome Hooks
+import { useAuthContext } from "@/contexts/AuthContext";
+
+// Custom Components
+import CustomAlert from "@/components/atoms/CustomAlert";
+import CustomLink from "@/components/atoms/CustomLink";
 
 // Styles
 import { theme } from "@/styles/theme";
 import { StyledSignIn } from "./style";
 
-import CustomAlert from "@/components/atoms/CustomAlert";
-import CustomLink from "@/components/atoms/CustomLink";
-
 const Signin = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const { handleAUTHENTICATE }: any = useAuthContext();
 
   const {
     register,
@@ -42,17 +39,7 @@ const Signin = () => {
   });
 
   const onSubmit = async (data: any) => {
-    try {
-      const res = await axios.post(
-        `https://react-tt-api.onrender.com/api/users${END_POINTS.LOGIN}`,
-        data
-      );
-      setIsLoading(true);
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setIsLoading(false);
-    }
+    await handleAUTHENTICATE(END_POINTS.LOGIN, data);
   };
 
   return (

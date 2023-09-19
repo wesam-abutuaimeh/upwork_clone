@@ -15,9 +15,9 @@ export const StyledFavoriteButton = styled.span`
 export const MODALSTYLE = {
   position: "absolute" as "absolute",
   top: "0",
-  right: "-2%",
-  width: 600,
-  height: 800,
+  right: "-25px",
+  widht: "50%",
+  height: "-webkit-fill-available",
   bgcolor: "background.paper",
   border: "2px solid #000",
   borderRadius: 6,

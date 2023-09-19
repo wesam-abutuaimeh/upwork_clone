@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import axios from "axios";
 import { ROLES } from "../constants/roles";
-import { authAPIUrl } from "../config/api";
+import { AUTH_API_URL } from "../config/api";
 
 const AUTH_ACTIONS = {
   AUTHENTICATE: "AUTHENTICATE",
@@ -84,7 +84,7 @@ const useAuth = () => {
   const handleAUTHENTICATE = async (endPoint: any, body: any) => {
     try {
       dispatch({ type: AUTH_ACTIONS.SET_LOADING });
-      const { data } = await axios.post(authAPIUrl + endPoint, body);
+      const { data } = await axios.post(AUTH_API_URL + endPoint, body);
       dispatch({ type: AUTH_ACTIONS.AUTHENTICATE, payload: data });
     } catch (error: any) {
       dispatch({ type: AUTH_ACTIONS.SET_ERROR, payload: error.message });

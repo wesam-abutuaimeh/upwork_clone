@@ -3,7 +3,7 @@ import { Card, Typography } from "@mui/material";
 
 // Custom Hooks
 import useAPI from "@/hooks/useAPI";
-import { API_URL, AUTH_API_URL } from "@/config/api";
+import { AUTH_API_URL } from "@/config/api";
 import { END_POINTS } from "@/constants/endPoints";
 
 const HeroSection = () => {
