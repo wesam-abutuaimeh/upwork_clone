@@ -1,0 +1,174 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "jobTitle": "Software Engineer",
+      "isHourly": false,
+      "level": "senior",
+      "timeWork": "Full-time",
+      "postedAt": "2023-09-17T10:00:00Z",
+      "category": "Development",
+      "price": "1020.00",
+      "proposalInfo": {
+        "description": "I need someone to create and design a landing page for my business.",
+        "proposalCounts": 10,
+        "isVerified": true,
+        "starCount": 4,
+        "location": "San Francisco, CA"
+      }
+    },
+    {
+      "id": 2,
+      "jobTitle": "Graphic Designer",
+      "isHourly": true,
+      "level": "entry",
+      "timeWork": "Part-time",
+      "postedAt": "2023-09-16T15:30:00Z",
+      "category": "Design",
+      "price": "300.00",
+      "proposalInfo": {
+        "description": "I need someone to create and design a landing page for my business.",
+        "proposalCounts": 5,
+        "isVerified": false,
+        "starCount": 2,
+        "location": "New York, NY"
+      }
+    },
+    {
+      "id": 3,
+      "jobTitle": "IT Support",
+      "isHourly": true,
+      "level": "senior",
+      "timeWork": "Part-time",
+      "postedAt": "2023-09-16T15:30:00Z",
+      "category": "Web Development",
+      "price": "900.00",
+      "proposalInfo": {
+        "description": "I need someone to test my app.",
+        "proposalCounts": 15,
+        "isVerified": true,
+        "starCount": 4,
+        "location": "Dubai"
+      }
+    },
+    {
+      "id": 4,
+      "jobTitle": "Graphic Designer",
+      "isHourly": false,
+      "level": "junior",
+      "timeWork": "Full-time",
+      "postedAt": "2023-09-17T10:45:00Z",
+      "category": "Graphic Design",
+      "price": "1500.00",
+      "proposalInfo": {
+        "description": "Looking for a creative graphic designer to design a new logo.",
+        "proposalCounts": 10,
+        "isVerified": false,
+        "starCount": 2,
+        "location": "New York"
+      }
+    },
+    {
+      "id": 5,
+      "jobTitle": "Content Writer",
+      "isHourly": true,
+      "level": "mid-level",
+      "timeWork": "Part-time",
+      "postedAt": "2023-09-15T16:45:00Z",
+      "category": "Writing",
+      "price": "1200.00",
+      "proposalInfo": {
+        "description": "Seeking a skilled content writer for blog articles.",
+        "proposalCounts": 15,
+        "isVerified": true,
+        "starCount": 4,
+        "location": "New York"
+      }
+    },
+    {
+      "id": 6,
+      "jobTitle": "Marketing Manager",
+      "isHourly": true,
+      "level": "senior",
+      "timeWork": "Full-time",
+      "postedAt": "2023-09-13T13:15:00Z",
+      "category": "Marketing",
+      "price": "3500.00",
+      "proposalInfo": {
+        "description": "Looking for an experienced marketing manager to lead our team.",
+        "proposalCounts": 18,
+        "isVerified": true,
+        "starCount": 4,
+        "location": "Boston"
+      }
+    },
+    {
+      "id": 7,
+      "jobTitle": "UX/UI Designer",
+      "isHourly": true,
+      "level": "mid-level",
+      "timeWork": "Part-time",
+      "postedAt": "2023-09-12T14:30:00Z",
+      "category": "Design",
+      "price": "2200.00",
+      "proposalInfo": {
+        "description": "Seeking a talented UX/UI designer for web and app design projects.",
+        "proposalCounts": 10,
+        "isVerified": false,
+        "starCount": 3,
+        "location": "Austin"
+      }
+    },
+    {
+      "id": 8,
+      "jobTitle": "Project Manager",
+      "isHourly": false,
+      "level": "senior",
+      "timeWork": "Full-time",
+      "postedAt": "2023-09-11T15:45:00Z",
+      "category": "Project Management",
+      "price": "4800.00",
+      "proposalInfo": {
+        "description": "Hiring an experienced project manager to oversee our projects.",
+        "proposalCounts": 14,
+        "isVerified": true,
+        "starCount": 4,
+        "location": "Denver"
+      }
+    },
+    {
+      "id": 9,
+      "jobTitle": "Customer Support",
+      "isHourly": true,
+      "level": "junior",
+      "timeWork": "Part-time",
+      "postedAt": "2023-09-10T16:00:00Z",
+      "category": "Customer Service",
+      "price": "1600.00",
+      "proposalInfo": {
+        "description": "Seeking a junior customer support representative for our online platform.",
+        "proposalCounts": 6,
+        "isVerified": false,
+        "starCount": 2,
+        "location": "Miami"
+      }
+    },
+    {
+      "id": 10,
+      "jobTitle": "SEO Specialist",
+      "isHourly": true,
+      "level": "mid-level",
+      "timeWork": "Full-time",
+      "postedAt": "2023-09-09T17:15:00Z",
+      "category": "Digital Marketing",
+      "price": "2800.00",
+      "proposalInfo": {
+        "description": "Hiring an SEO specialist to improve our online visibility.",
+        "proposalCounts": 12,
+        "isVerified": true,
+        "starCount": 4,
+        "location": "San Diego"
+      }
+    }
+  ]
+}
