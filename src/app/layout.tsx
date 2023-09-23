@@ -1,8 +1,8 @@
-"use client";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Signika } from "next/font/google";
 import AuthContext from "@/contexts/AuthContext";
+import { ReduxProvider } from "@/redux/provider";
 
 interface IPorps {
   children: React.ReactNode;
@@ -26,7 +26,10 @@ export default function RootLayout({ children, session }: IPorps) {
         <link rel="icon" href="/upwork_favicon.jpeg" sizes="any" />
       </head>
       <body className={signika.className}>
-        <AuthContext>{children}</AuthContext>
+        <ReduxProvider>
+          <AuthContext>{children}</AuthContext>
+        </ReduxProvider>
+
       </body>
     </html>
   );

@@ -18,7 +18,6 @@ const HeroSection = () => {
         get(config);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [config.headers.Authorization])
-    console.log(data);
 
     return (
         <Card sx={{ padding: "20px", borderRadius: "6px" }} variant="outlined">

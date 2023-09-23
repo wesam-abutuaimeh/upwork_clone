@@ -15,20 +15,18 @@ const getToken = () => {
   if (typeof window !== "undefined") {
     return localStorage.getItem("token") || null;
   }
-  return null;
 };
 
 const getRole = () => {
   if (typeof window !== "undefined") {
     return localStorage.getItem("role") || ROLES.GUEST;
   }
-  return null;
 };
 
 const INIT_STATE = {
   user: null,
   isAuth: false,
-  token: getToken(), // Use the getToken function to get the token
+  token: getToken(),
   role: getRole(),
   error: null,
   isLoading: false,
@@ -47,7 +45,7 @@ const authReducer = (state: any, action: any) => {
         isLoading: false,
       };
     case AUTH_ACTIONS.AUTHENTICATE:
-      const token = action.payload.token || state.token || getToken(); // Use the getToken function here
+      const token = action.payload.token || state.token || getToken();
       const role = checkRole();
       localStorage.setItem("role", role);
       localStorage.setItem("token", token);

@@ -36,7 +36,7 @@ import { theme } from "@/styles/theme";
 import { StyledSignIn } from "./style";
 
 // Hooks
-import {} from "@/hooks/useAuth";
+import { } from "@/hooks/useAuth";
 import { useAuthContext } from "@/contexts/AuthContext";
 
 const Signup = () => {

@@ -170,5 +170,32 @@
         "location": "San Diego"
       }
     }
+  ],
+  "users": [
+    {
+      "name": "Hamdan T.",
+      "avatar": "/avatar.webp",
+      "location": "Gaza, Palestinian Territories",
+      "jobTitle": "Full Stack Developer",
+      "pricePerHour": 25,
+      "bio": "I'm a software engineer and MERN Stack Developer specialist in ReactJs, I'm working on developing professional web apps with responsive designs, high- performance, reusable components, using the newest and most popular frameworks and technologies like React, Next, Redux, and more. Also, I have rested many APIs with node.js, Express.js, MoongoDB...",
+      "skills": [
+        "HTML5",
+        "CSS 3",
+        "Java",
+        "Javascript",
+        "React",
+        "Typescript",
+        "Python",
+        "NEXTJS",
+        "Node.js",
+        "SASS",
+        "Landing page",
+        "Express JS",
+        "MoongoDB",
+        "Unit Testing",
+        "Web Development"
+      ]
+    }
   ]
 }

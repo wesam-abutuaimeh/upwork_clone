@@ -256,7 +256,7 @@ const Jobs = () => {
               sx={{ fontSize: "26px", fontWeight: "500", cursor: "pointer" }}
             />
             <CustomLink
-              href="/"
+              href={`/home/${jobId}`}
               style={{
                 display: "flex",
                 alignItems: "center",

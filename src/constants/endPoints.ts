@@ -3,4 +3,5 @@ export const END_POINTS = {
   SIGNUP: "/signup",
   PROFILE: "/profile",
   JOBS_LIST: "/jobs",
+  USERS: "/users",
 };

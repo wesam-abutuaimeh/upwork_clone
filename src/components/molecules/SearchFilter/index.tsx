@@ -4,6 +4,7 @@ import { Box, TextField, Typography } from "@mui/material";
 import { StyledButton, StyledSearchedKeys } from "./style";
 
 const Searchbar = () => {
+
   return (
     <Box>
       <Box

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import AuthFooter from "@/components/AuthFooter";
 

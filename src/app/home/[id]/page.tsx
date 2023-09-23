@@ -55,97 +55,99 @@ const HomePageDetails = ({ params }: any) => {
     }, [])
 
     return (
-        <Container>
-            <Typography variant="h6" component="p">Job details</Typography>
-            {!isLoading ?
-                <Box sx={{ display: "flex" }}>
-                    <Box sx={{ border: "1px solid #d5e0d5", padding: "20px", borderRadius: "11px" }}>
+        <div>
+            <Container>
+                <Typography variant="h6" component="p">Job details</Typography>
+                {!isLoading ?
+                    <Box sx={{ display: "flex" }}>
+                        <Box sx={{ border: "1px solid #d5e0d5", padding: "20px", borderRadius: "11px" }}>
 
-                        <Typography variant="body1" component="h1" sx={{ fontSize: "20px", fontWeight: "500" }}>
-                            {data.jobTitle}
-                        </Typography>
-                        <Typography variant="body1" component="p" mt={3.7} mb={.7} sx={{ color: "#108a00", fontWeight: "600" }}>
-                            {data.category}
-                        </Typography>
-                        <Typography variant="body1" component="p" sx={{ color: "#5e6d55" }}>
-                            Posted 21 hours ago
-                        </Typography>
+                            <Typography variant="body1" component="h1" sx={{ fontSize: "20px", fontWeight: "500" }}>
+                                {data.jobTitle}
+                            </Typography>
+                            <Typography variant="body1" component="p" mt={3.7} mb={.7} sx={{ color: "#108a00", fontWeight: "600" }}>
+                                {data.category}
+                            </Typography>
+                            <Typography variant="body1" component="p" sx={{ color: "#5e6d55" }}>
+                                Posted 21 hours ago
+                            </Typography>
 
-                        <Box mt={2} mb={2} sx={{ display: "flex", alignItems: "center" }}><LocationOnIcon sx={{ color: "#1f57c3" }} /> Worldwide
+                            <Box mt={2} mb={2} sx={{ display: "flex", alignItems: "center" }}><LocationOnIcon sx={{ color: "#1f57c3" }} /> Worldwide
+                            </Box>
+                            <Divider />
+                            <Typography variant="body1" component="p" mt={3.7} mb={3.7} sx={{ lineHeight: "2.5", maxWidth: "533px" }} >
+                                {/* {data.proposalInfo.description} */}
+                                {/* [ ] Undefiend error !! */}
+                                I need someone to create and design a landing page for my business.
+                            </Typography>
+                            <Divider />
+
+                            <Stack mt={2} mb={5} spacing={2} direction={{ xs: 'column', sm: 'row' }}>
+                                <Box sx={{ display: "flex", gap: "5px" }}>
+                                    <PriceChangeIcon />
+                                    <Box>
+                                        <Typography variant="h6" component="p">
+                                            {`$${data.price}`}
+                                        </Typography>
+                                        <Typography variant="body1" component="p" sx={{ color: "#5e6d55", maxWidth: "200px" }}>
+                                            {data.isHourly ? "Hourly-price" : "Fixed-price"}
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                                <Box sx={{ display: "flex", gap: "5px" }}>
+                                    <PsychologyIcon />
+                                    <Box>
+                                        <Typography variant="h6" component="p" sx={{ textTransform: "capitalize" }}>
+                                            {data.level} level
+                                        </Typography>
+                                        <Typography variant="body1" component="p" sx={{ color: "#5e6d55", maxWidth: "200px" }}>
+                                            {data.level === "entry" ? 'i am looking for freelancers with the lowest rates' : 'i am looking for freelancers with high experience'}
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                                <Box sx={{ display: "flex", gap: "5px" }}>
+                                    <TextSnippetOutlinedIcon />
+                                    <Box>
+                                        <Typography variant="h6" component="p" sx={{ textTransform: "capitalize" }}>
+                                            Contract-to-hire
+                                        </Typography>
+                                        <Typography variant="body1" component="p" sx={{ color: "#5e6d55", maxWidth: "200px" }}>
+                                            {
+                                                data.timeWork === "Full-time" ?
+                                                    'This job has the potential to turn into a full time role' :
+                                                    'This job has the potential to turn into a part time role'
+                                            }
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                            </Stack>
+                            <Divider />
+                            <Typography variant="body1" component="p" mt={2} mb={2} sx={{ fontWeight: "500" }}>
+                                Project Type : {data.level === "senior" ? "Complex Project" : "Mid level Project"}
+                            </Typography>
                         </Box>
-                        <Divider />
-                        <Typography variant="body1" component="p" mt={3.7} mb={3.7} sx={{ lineHeight: "2.5", maxWidth: "533px" }} >
-                            {/* {data.proposalInfo.description} */}
-                            {/* [ ] Undefiend error !! */}
-                            I need someone to create and design a landing page for my business.
-                        </Typography>
-                        <Divider />
+                        <StyledAside>
+                            <Button variant="contained" color="success" fullWidth sx={{ boxShadow: "none", borderRadius: "25px", backgroundColor: "#108a00" }}>
+                                Apply Now
+                            </Button>
+                            <Button variant="outlined" fullWidth sx={{ boxShadow: "none", borderRadius: "25px", color: "#108a00", textTransform: "capitalize" }}>
+                                <FavoriteBorderIcon sx={{ width: "16px", marginRight: "5px" }} /> Save Job
+                            </Button>
 
-                        <Stack mt={2} mb={5} spacing={2} direction={{ xs: 'column', sm: 'row' }}>
-                            <Box sx={{ display: "flex", gap: "5px" }}>
-                                <PriceChangeIcon />
-                                <Box>
-                                    <Typography variant="h6" component="p">
-                                        {`$${data.price}`}
-                                    </Typography>
-                                    <Typography variant="body1" component="p" sx={{ color: "#5e6d55", maxWidth: "200px" }}>
-                                        {data.isHourly ? "Hourly-price" : "Fixed-price"}
-                                    </Typography>
-                                </Box>
-                            </Box>
-                            <Box sx={{ display: "flex", gap: "5px" }}>
-                                <PsychologyIcon />
-                                <Box>
-                                    <Typography variant="h6" component="p" sx={{ textTransform: "capitalize" }}>
-                                        {data.level} level
-                                    </Typography>
-                                    <Typography variant="body1" component="p" sx={{ color: "#5e6d55", maxWidth: "200px" }}>
-                                        {data.level === "entry" ? 'i am looking for freelancers with the lowest rates' : 'i am looking for freelancers with high experience'}
-                                    </Typography>
-                                </Box>
-                            </Box>
-                            <Box sx={{ display: "flex", gap: "5px" }}>
-                                <TextSnippetOutlinedIcon />
-                                <Box>
-                                    <Typography variant="h6" component="p" sx={{ textTransform: "capitalize" }}>
-                                        Contract-to-hire
-                                    </Typography>
-                                    <Typography variant="body1" component="p" sx={{ color: "#5e6d55", maxWidth: "200px" }}>
-                                        {
-                                            data.timeWork === "Full-time" ?
-                                                'This job has the potential to turn into a full time role' :
-                                                'This job has the potential to turn into a part time role'
-                                        }
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Stack>
-                        <Divider />
-                        <Typography variant="body1" component="p" mt={2} mb={2} sx={{ fontWeight: "500" }}>
-                            Project Type : {data.level === "senior" ? "Complex Project" : "Mid level Project"}
-                        </Typography>
+                            <Typography variant="body1" component="p" sx={{ fontWeight: "600" }}>
+                                Job Link
+                            </Typography>
+                            <Chip label={JOB_LINK} sx={{ backgroundColor: "#e3ebe3", color: "#9aaa97", borderRadius: "11px", height: "40px" }}
+                                onClick={() => handleCopy(JOB_LINK)}
+                                variant="outlined"
+                            />
+                            {copySuccess && <p>Copied to clipboard!</p>}
+                        </StyledAside>
                     </Box>
-                    <StyledAside>
-                        <Button variant="contained" color="success" fullWidth sx={{ boxShadow: "none", borderRadius: "25px", backgroundColor: "#108a00" }}>
-                            Apply Now
-                        </Button>
-                        <Button variant="outlined" fullWidth sx={{ boxShadow: "none", borderRadius: "25px", color: "#108a00", textTransform: "capitalize" }}>
-                            <FavoriteBorderIcon sx={{ width: "16px", marginRight: "5px" }} /> Save Job
-                        </Button>
-
-                        <Typography variant="body1" component="p" sx={{ fontWeight: "600" }}>
-                            Job Link
-                        </Typography>
-                        <Chip label={JOB_LINK} sx={{ backgroundColor: "#e3ebe3", color: "#9aaa97", borderRadius: "11px", height: "40px" }}
-                            onClick={() => handleCopy(JOB_LINK)}
-                            variant="outlined"
-                        />
-                        {copySuccess && <p>Copied to clipboard!</p>}
-                    </StyledAside>
-                </Box>
-                : <Skeleton animation="wave" />
-            }
-        </Container>
+                    : <Skeleton animation="wave" />
+                }
+            </Container>
+        </div>
     )
 }
 
